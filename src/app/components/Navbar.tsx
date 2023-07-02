@@ -5,7 +5,7 @@ export default function Navbar() {
   return (
     <div className="Navbar">
       <ul>
-        <li className="">
+        <li className="home">
           <Link href="/">Home</Link>
         </li>
         <li className="">
