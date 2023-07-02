@@ -2,8 +2,6 @@ import React from "react";
 
 export default function Body() {
   return (
-    <div>
-      <h1>Body</h1>
-    </div>
+    <body className="bg-gradient-to-t from-[#fbc2eb] to-[#a6c1ee] h-screen"></body>
   );
 }
