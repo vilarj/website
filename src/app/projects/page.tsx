@@ -2,11 +2,11 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
-export default function Youtube() {
+export default function Projects() {
   return (
     <div>
       <Navbar />
-      <h1>Youtube Channel</h1>
+      <h1>Projects</h1>
       <Footer />
     </div>
   );
