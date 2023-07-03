@@ -19,7 +19,7 @@ export default function Navbar() {
               <Link href="/contact">Contact</Link>
             </li>
             <li className="mx-4 my-6 md:my-0 text-blue-200 hover:text-teal-500">
-              <Link href="/youtube">Youtube</Link>
+              <Link href="https://www.youtube.com/@vilarj" target="_blank">Youtube</Link>
             </li>
           </ul>
         </div>
