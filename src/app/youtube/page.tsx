@@ -8,7 +8,7 @@ export default function Youtube() {
     <div>
       <Navbar />
       <h1>Youtube Channel</h1>
-      <Body />
+      <body className="bg-gradient-to-t from-[#68f687] to-[#4b7dd4] h-screen"/>
       <Footer />
     </div>
   );
