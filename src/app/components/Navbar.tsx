@@ -3,27 +3,49 @@ import Link from "next/link";
 
 export default function Navbar() {
   return (
-    <div className="bg-zinc-900">
-      <nav className="text-white">
-        <div>
-          <span className="text-3xl cursor-pointer mx-2 md:hidden block"></span>
-
-          <ul className="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8">
-            <li className="mx-4 my-6 md:my-0 text-blue-200 hover:text-teal-200">
-              <Link href="/">Home</Link>
-            </li>
-            <li className="mx-4 my-6 md:my-0 text-blue-200 hover:text-teal-300">
-              <Link href="/projects">Projects</Link>
-            </li>
-            <li className="mx-4 my-6 md:my-0 text-blue-200 hover:text-teal-400">
-              <Link href="/contact">Contact</Link>
-            </li>
-            <li className="mx-4 my-6 md:my-0 text-blue-200 hover:text-teal-500">
-              <Link href="https://www.youtube.com/@vilarj" target="_blank">Youtube</Link>
-            </li>
-          </ul>
+    <nav className="bg-gray-800">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16">
+          <div className="flex items-center">
+            {/* Logo */}
+            <Link href="/" className="flex-shrink-0 text-white font-bold text-lg">
+              Vilarj
+            </Link>
+          </div>
+          <div className="hidden md:block">
+            <div className="ml-10 flex items-baseline space-x-4">
+              {/* Contact */}
+              <Link href="/contact" className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Contact</Link>
+              {/* Projects */}
+              <Link href="/projects" className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Projects</Link>
+              {/* Youtube */}
+              <Link href="https://www.youtube.com/@vilarj" target="_blank" className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Youtube</Link>
+            </div>
+          </div>
+          <div className="-mr-2 flex md:hidden">
+            <button type="button" className="bg-gray-900 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+              <span className="sr-only">Open main menu</span>
+              <svg className="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path strokeLinecap="round" stroke-linejoin="round" stroke-width="2"></path>
+              </svg>
+              <svg className="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path strokeLinecap="round" stroke-linejoin="round" stroke-width="2"></path>
+              </svg>
+            </button>
+          </div>
         </div>
-      </nav>
-    </div>
+      </div>
+
+      <div className="md:hidden" id="mobile-menu">
+        <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          {/* Contact */}
+          <Link href="/contact" className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Contact</Link>
+          {/* Projects */}
+          <Link href="/projects" className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Projects</Link>
+          {/* Youtube */}
+          <Link href="https://www.youtube.com/@vilarj" target="_blank" className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Youtube</Link>
+        </div>
+      </div>
+    </nav>
   );
 }
