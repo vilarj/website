@@ -1,7 +1,21 @@
+"use client";
 import React from "react";
 import Link from "next/link";
 
 export default function Navbar() {
+  const handleClick = () => {
+    document.getElementById("toggle-menu")!.addEventListener("click", event);
+  };
+
+  const event = () => {
+    var mobileMenu = document.getElementById("mobile-menu");
+
+    if (mobileMenu == null) {
+    } else {
+      mobileMenu.classList.toggle("hidden");
+    }
+  };
+
   return (
     <nav className="bg-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -10,7 +24,7 @@ export default function Navbar() {
             {/* Logo */}
             <Link
               href="/"
-              className="flex-shrink-0 text-white font-bold text-lg"
+              className="flex-shrink-0 text-sky-50 italic font-bold text-lg"
             >
               Vilarj
             </Link>
@@ -20,14 +34,14 @@ export default function Navbar() {
               {/* Contact */}
               <Link
                 href="/contact"
-                className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                className="text-sky-50 italic hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
               >
                 Contact
               </Link>
               {/* Projects */}
               <Link
                 href="/projects"
-                className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                className="text-sky-50 italic hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
               >
                 Projects
               </Link>
@@ -35,7 +49,7 @@ export default function Navbar() {
               <Link
                 href="https://www.youtube.com/@vilarj"
                 target="_blank"
-                className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                className="text-sky-50 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
               >
                 Youtube
               </Link>
@@ -47,6 +61,8 @@ export default function Navbar() {
               className="bg-gray-900 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
               aria-controls="mobile-menu"
               aria-expanded="false"
+              onClick={handleClick}
+              id="toggle-menu"
             >
               <span className="sr-only" />
               <svg
@@ -58,9 +74,8 @@ export default function Navbar() {
                 aria-hidden="true"
               >
                 <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
                   d="M4 6h16M4 12h16M4 18h16"
                 />
               </svg>
@@ -73,16 +88,11 @@ export default function Navbar() {
                 aria-hidden="true"
               >
                 <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
                   d="M6 18L18 6M6 6l12 12"
                 />
-                <path
-                  strokeLinecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                ></path>
+                <path strokeLinejoin="round" strokeWidth="2"></path>
               </svg>
             </button>
           </div>

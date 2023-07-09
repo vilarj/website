@@ -9,7 +9,7 @@ export default function Footer() {
         Reserved.
       </span>
       <ul className="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
-        <li>
+        <li className="text-sky-50 italic">
           <Link href="/about" className="mr-4 md:mr-6 hover:text-yellow-200">
             About
           </Link>
