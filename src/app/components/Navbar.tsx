@@ -40,7 +40,8 @@ export default function Navbar() {
               </Link>
               {/* Projects */}
               <Link
-                href="/projects"
+                href="https://github.com/vilarj"
+                target="_blank"
                 className="text-sky-50 italic hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
               >
                 Projects
