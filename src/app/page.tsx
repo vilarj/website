@@ -12,6 +12,7 @@ export default function Home() {
         <ToastContainer />
         <Navbar />
         <Body />
+        <h1>Alinson</h1>
         <Footer />
       </div>
     </div>
